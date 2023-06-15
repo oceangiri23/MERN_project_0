@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
+
+  const navigate= useNavigate();
 
     const [name,setName] = useState("");
     const [email,setEmail]= useState("");
@@ -31,6 +34,7 @@ const Create = () => {
             setName("");
             setEmail("");
             setAge(0);
+            navigate("./all") // submit garepachi window all wala ma jancha 
         } 
     };
 

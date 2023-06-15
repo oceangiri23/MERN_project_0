@@ -5,6 +5,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 app.use(express.json()); // web ya postman bata ako data json format ma change huncha 
 const userRouter = require("./routes/userRoutes")
+const cors = require("cors");
+app.use(cors());
+
 
 
 
@@ -24,7 +27,7 @@ app.use(userRouter);
 
 
 
-app.listen(process.env.PORT || 4000, (err) =>{
+app.listen(process.env.PORT || 3000, (err) =>{
     if (err) console.log(err);
     console.log("running in port"+ process.env.PORT);
 }) ;
